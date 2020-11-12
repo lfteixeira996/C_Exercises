@@ -13,7 +13,7 @@ int main(void)
 
 
 	printf("*******************************************\n");
-	printf("**		  calculator          **\n");
+	printf("**		  calculator             **\n");
 	printf("*******************************************\n");
 	
 
@@ -24,22 +24,20 @@ int main(void)
 		printf("Multiply A*B (*)\n");
 		printf("Division A/B (/)\n");
 		printf("Pow A^B (^)\n");
-		printf("Quit (0)\n");
+		printf("Quit (q)\n");
 		printf("Choose one option: ");
-		scanf("%c", &input);
+		scanf(" %c", &input);
 
 
-		if (input == '0')
+		if (input == 'q')
 		{
 			printf("Exiting!\n");
 			system("clear");
 			return 0;
 		}
 
-		printf("A value: ");
-		scanf("%d", &A);
-		printf("B value: ");
-		scanf("%d", &B);
+		printf("Insert the operands: ");
+		scanf("%d %d", &A, &B);
 		
 
 		switch(input)

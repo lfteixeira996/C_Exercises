@@ -1,4 +1,6 @@
+#include <math.h>
 #include "math_functions.h"
+
 
 
 
@@ -28,5 +30,12 @@ float my_div(int A, int B)
 
 int my_pow(int A, int B)
 {
-	return A^B;
+	int ret = A;
+
+	for (int i = 1; i < B; ++i)
+	{
+		ret *= A;
+	}
+
+	return ret;
 }
